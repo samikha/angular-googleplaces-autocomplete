@@ -153,20 +153,16 @@ angular.module( "ngAutocomplete", [])
 			}, true);
 
 			if ($window.google && $window.google.maps && $window.google.maps.places) {
-				console.log('already loaded');
 				initAutoComplete();
 			}else{
-				$log.log('not loaded');
 				lazyLoadApi().then(function () {
-                    console.log('promise resolved');
                     if ($window.google && $window.google.maps && $window.google.maps.places) {
                     	initAutoComplete();
-                        console.log('gmaps loaded');
                     } else {
-                        console.log('gmaps not loaded');
+                        $log.error('Error loading Google Maps API');
                     }
                 }, function () {
-                    console.log('promise rejected');
+                    $log.error('Error loading Google Maps API');
                 });
 			}		
 		}
