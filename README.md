@@ -1,12 +1,15 @@
-# ng-Autocomplete
+# angular-googleplaces-autocomplete 
+#### Originally forked from ngAutocomplete by Will Palahnuk
 
 A simple directive for adding google places autocomplete to a textbox element. 
 
 Updated to now use ng-model, should work much better in forms. Can now set an initial value using ng-model. Using the ng-model to set the textbox value does not trigger the autocomplete query.
 
-Tested with angularjs-1.2.4
+#### Now loads Google Places Library asynchronously
+#### Emits `ngAutocomplete:details` when details loaded
 
-Uses optional directive parameters, so it won't work with <1.2. If people are interested I'll release a <1.2 version.
+Tested with angularjs - 1.2.4 - 1.3.4
+
 
 ## Examples
 
@@ -14,12 +17,13 @@ Uses optional directive parameters, so it won't work with <1.2. If people are in
 
 + [Example Plunkers - Advanced Usage](http://plnkr.co/edit/GF3nM3XfYX9El2w11pGo?p=preview)
 
-## Usage
+## Installation
 
-Include the required libraries 
-```html
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 ```
+bower install angular-googleplaces-autocomplete
+```
+
+## Usage
 
 Declare a dependency on the `ngAutocomplete` module
 ``` javascript
@@ -55,7 +59,11 @@ country: 'ca'
 
 google places autocomplete info: https://developers.google.com/maps/documentation/javascript/places
 
-## Author
+## Repo Maintainer
+
+**Tim Withers** (http://github.com/TimWithers)
+
+## Original Author
 
 **Will Palahnuk** (http://github.com/wpalahnuk)
 
