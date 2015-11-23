@@ -38,7 +38,7 @@ angular.module( "ngAutocomplete", [])
         $window.googleMapsInitialized = function () {
             deferred.resolve();
         };
-        loadScript('//maps.googleapis.com/maps/api/js?libraries=places&sensor=false&callback=','googleMapsInitialized');
+        loadScript('https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&callback=','googleMapsInitialized');
         return deferred.promise;
     }
 	return {
